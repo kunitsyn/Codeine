@@ -50,6 +50,12 @@
     <Compile Include="DiffForm.Designer.cs">
       <DependentUpon>DiffForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MergeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergeForm.Designer.cs">
+      <DependentUpon>MergeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DiffForm.resx">

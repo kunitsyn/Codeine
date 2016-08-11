@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Codeine
 {
-    public partial class DiffForm : Form
+    public partial class MergeForm : Form
     {
-        public DiffForm(Program.DiffInfo info)
+        public MergeForm(Program.MergeInfo info)
         {
             InitializeComponent();
         }

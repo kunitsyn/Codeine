@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Codeine
 {
-    static class Program
+    public static class Program
     {
         public struct DiffInfo
         {
@@ -32,7 +32,14 @@ namespace Codeine
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DiffForm());
+            if (commandLineInfo as DiffInfo? != null)
+            {
+                Application.Run(new DiffForm((DiffInfo)commandLineInfo));
+            }
+            else if (commandLineInfo as MergeInfo? != null)
+            {
+                Application.Run(new MergeForm((MergeInfo)commandLineInfo));
+            }
         }
 
         static object ParseCommandLine()
